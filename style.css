@@ -1,0 +1,223 @@
+/* Admin Login */
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    margin-top: 50px;
+
+}
+
+/* Admin Dashboard */
+.list-group-item.active {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.list-group-item.list-group-item-action:hover {
+    background-color: #f8f9fa;
+}
+
+/* Custom CSS for Admin Dashboard sidebar */
+/* Custom CSS for sidebar */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    height: 100vh;
+    top: 0;
+    position: sticky;
+    z-index: 100;
+    padding-top: 20px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+}
+
+.sidebar a {
+    display: block;
+    color: #333;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background-color: #e9ecef;
+}
+
+.sub-menu {
+    display: none;
+    padding-left: 20px;
+}
+
+.sub-menu li {
+    padding: 5px 0;
+}
+
+.active {
+    background-color: #e9ecef;
+}
+
+/* Add custom styles for the main content area (optional) */
+.main-content {
+    margin-left: 250px;
+    /* Adjust this value based on the width of the sidebar */
+    padding: 20px;
+}
+
+/* Additional styling for the card content */
+.card-content {
+    padding-top: 20px;
+    position: sticky;
+    
+}
+
+.card-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.btn-back {
+    position: sticky;
+    top: 20px;
+    float: right;
+    margin-right: 20px;
+}
+
+/* Style for the search form */
+.form-inline {
+    margin-bottom: 20px;
+}
+
+/* Style for the search bar */
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+/* Style for the search input */
+.form-control {
+    flex: 1;
+}
+
+/* Style for the search button */
+.search-btn {
+    margin-left: 5px;
+}
+
+/* Style for the table */
+.table {
+    font-size: 14px;
+    /* Adjust font size for better readability */
+}
+
+/* Style for the table headings */
+.table th {
+    cursor: pointer;
+}
+
+/* Style for the sorting icons */
+.table th i {
+    margin-left: 5px;
+}
+
+/* Style to make table headings fit on one line */
+.table th {
+    white-space: nowrap;
+}
+
+/* Style to make table data fit on one line */
+.table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Style for the table responsiveness */
+@media (max-width: 768px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+}
+
+/* leave.php */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e6e6e6;
+}
+
+select {
+    padding: 4px;
+}
+
+input[type="submit"] {
+    padding: 4px 8px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.back-button {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    color: #007bff;
+    text-decoration: none;
+}

@@ -1,0 +1,151 @@
+/* Employee Login Form CSS */
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.card {
+    margin-top: 20px;
+    border: 1px solid #dee2e6;
+}
+
+.card-header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.btn-primary {
+    border-radius: 0;
+    width: 100%;
+}
+
+.alert {
+    margin-top: 20px;
+    border-radius: 0;
+}
+
+/* View leave */
+/* Add your custom styles here */
+body {
+    padding-top: 20px;
+}
+
+.table {
+    font-size: 14px;
+}
+
+.table th {
+    cursor: pointer;
+}
+
+.table th i {
+    margin-left: 5px;
+}
+
+.table th {
+    white-space: nowrap;
+}
+
+.table td {
+    white-space: nowrap;
+}
+
+
+/* CSS for the back button */
+.btn-back {
+    display: block;
+    margin-top: 20px;
+    padding: 7.5px 15px;
+    background-color: #dc3545;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    width: 15%;
+  
+}
+
+.btn-back:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.btn-back i {
+    margin-right: 5px;
+}
+
+/* Add these styles to your existing style.css or create a new one */
+
+/* Style for the table */
+.table {
+    width: 100%;
+}
+
+/* Style for the back button */
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+/* Income table */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
