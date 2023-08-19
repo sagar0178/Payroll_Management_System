@@ -1,6 +1,7 @@
 <?php
 // Include the database configuration
 require_once('config.php');
+include 'auth.php';
 
 // Fetch data from income and employees tables using a join
 $query = "SELECT income.employee_id, income.total, employees.marital_status FROM income
@@ -68,9 +69,28 @@ if ($result) {
     }
 
     echo "Tax calculation and insertion/update successful.";
+
+    
 } else {
     echo "Error fetching income data: " . $conn->error;
 }
 
+
 // Close the database connection
 $conn->close();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculation</title>
+</head>
+
+<body>
+    <a href="dashboard.php" class="back-button">Back to Dashboard</a>
+</body>
+
+</html>

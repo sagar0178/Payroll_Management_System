@@ -10,6 +10,7 @@ body {
 .card {
     margin-top: 20px;
     border: 1px solid #dee2e6;
+    width: 150%;
 }
 
 .card-header {

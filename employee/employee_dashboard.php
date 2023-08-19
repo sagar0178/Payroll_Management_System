@@ -48,13 +48,16 @@ if (isset($_SESSION['success_message'])) {
 <body>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="view_income.php">Employee Dashboard</a>
+            <a class="navbar-brand" href="#">Employee Dashboard</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="view_income.php">Income Statment</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="apply_leave.php">Apply for Leave</a>
                     </li>

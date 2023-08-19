@@ -1,6 +1,12 @@
 <?php
-// Start the session to access session variables
 session_start();
+
+if (!isset($_SESSION['username'])) {
+    header('Location: admin_login.html');
+    exit;
+}
+
+$loggedInUsername = $_SESSION['username'];
 ?>
 
 <!DOCTYPE html>
@@ -35,6 +41,9 @@ session_start();
         </div>
     </nav>
     <!-- Main content -->
+
+    <h1>Welcome, <?php echo $loggedInUsername?>! To Admin Dashboard</h1>
+
     <div class="container-fluid">
         <div class="row">
             <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
@@ -42,11 +51,13 @@ session_start();
                 <div class="position-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a href="dashboard.php" class="nav-link">Update Tax-OT-Bonus</a>
+                            <a href="employee_management.php" class="nav-link active">Employee
+                                Management</a>
                         </li>
                         <li class="nav-item">
-                            <a href="employee_management.php" class="nav-link active">Employee Management</a>
+                            <a href="dashboard.php" class="nav-link">Update Tax-OT-Bonus</a>
                         </li>
+
                         <li class="nav-item">
                             <a href="add_employee.php" class="nav-link">Add New Employee Details</a>
                         </li>
@@ -59,6 +70,9 @@ session_start();
                         </li>
                         <li class="nav-item">
                             <a href="delete_password.php" class="nav-link">Delete Password</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="leave.php" class="nav-link">Leave Management</a>
                         </li>
                     </ul>
                 </div>

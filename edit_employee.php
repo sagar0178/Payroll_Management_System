@@ -2,35 +2,35 @@
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
-  $employee_id = $_GET['id'];
-  require_once 'config.php';
+    $employee_id = $_GET['id'];
+    require_once 'config.php';
 
-  $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+    $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 
-  $sql = "SELECT * FROM employees WHERE id = ?";
-  $stmt = $conn->prepare($sql);
-  $stmt->bind_param("i", $employee_id);
-  $stmt->execute();
-  $result = $stmt->get_result();
+    $sql = "SELECT * FROM employees WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $employee_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-  if ($result->num_rows > 0) {
-    $employee = $result->fetch_assoc();
-  } else {
-    $_SESSION['error_message'] = "Employee not found.";
-    header("Location: admin_dashboard.php");
-    exit;
-  }
+    if ($result->num_rows > 0) {
+        $employee = $result->fetch_assoc();
+    } else {
+        $_SESSION['error_message'] = "Employee not found.";
+        header("Location: admin_dashboard.php");
+        exit;
+    }
 
-  $stmt->close();
-  $conn->close();
+    $stmt->close();
+    $conn->close();
 } else {
-  $_SESSION['error_message'] = "Invalid request.";
-  header("Location: admin_dashboard.php");
-  exit;
+    $_SESSION['error_message'] = "Invalid request.";
+    header("Location: employee_management.php");
+    exit;
 }
 ?>
 
@@ -63,25 +63,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
                                 <label for="department">Department</label>
                                 <select class="form-control" id="department" name="department" required>
                                     <?php
-                  require_once 'config.php';
-                  $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+                                    require_once 'config.php';
+                                    $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
-                  if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                  }
+                                    if ($conn->connect_error) {
+                                        die("Connection failed: " . $conn->connect_error);
+                                    }
 
-                  $sql = "SELECT department_name FROM departments";
-                  $result = $conn->query($sql);
+                                    $sql = "SELECT department_name FROM departments";
+                                    $result = $conn->query($sql);
 
-                  if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                      $selected = ($employee['department'] === $row['department_name']) ? "selected" : "";
-                      echo '<option value="' . $row['department_name'] . '" ' . $selected . '>' . $row['department_name'] . '</option>';
-                    }
-                  }
+                                    if ($result->num_rows > 0) {
+                                        while ($row = $result->fetch_assoc()) {
+                                            $selected = ($employee['department'] === $row['department_name']) ? "selected" : "";
+                                            echo '<option value="' . $row['department_name'] . '" ' . $selected . '>' . $row['department_name'] . '</option>';
+                                        }
+                                    }
 
-                  $conn->close();
-                  ?>
+                                    $conn->close();
+                                    ?>
                                 </select>
                             </div>
 
@@ -132,7 +132,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
                                 </select>
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary">Update Employee</button>
+
+                                <button type="submit" class="btn btn-primary">Update
+                                    Employee</button>
+                                <button style="margin-top:16px;" type="button" class="btn btn-danger mb-3"
+                                    onclick="go_Back()">Back</button>
+
                             </div>
                         </form>
                     </div>
@@ -140,10 +145,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
             </div>
         </div>
     </div>
-    <!-- Link Bootstrap JS and jQuery -->
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

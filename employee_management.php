@@ -274,16 +274,6 @@ $employeeData = getEmployeeData($conn, $sortColumn, $sortOrder, $searchQuery);
                 </div>
             </div>
         </div>
-
-        <!-- Main content area -->
-        <div class="card card-content mt-4">
-            <div class="card-body">
-                <div class="text-center mt-3">
-                    <button type="submit" class="btn btn-primary">Add Employee</button>
-                </div>
-                </form>
-            </div>
-        </div>
     </main>
 
     <!-- Link Bootstrap JS and jQuery -->

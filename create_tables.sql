@@ -13,12 +13,12 @@ CREATE TABLE IF NOT EXISTS employees (
   employee_type VARCHAR(50) NOT NULL,
   basic_pay DECIMAL(10, 2) NOT NULL,
   contact VARCHAR(20),
-  email VARCHAR(100),
+  email VARCHAR(100) UNIQUE,
   home_address VARCHAR(200),
   city VARCHAR(50),
   zip VARCHAR(10),
   marital_status VARCHAR(20),
-  password VARCHAR(100) NOT NULL;
+  password VARCHAR(100) NOT NULL
 );
 
 -- Table: deductions
@@ -38,6 +38,7 @@ CREATE TABLE IF NOT EXISTS income (
   overtime DECIMAL(10, 2) NOT NULL,
   bonus DECIMAL(10, 2) NOT NULL,
   net_pay DECIMAL(10, 2) NOT NULL,
+  total DECIMAL(10, 2) NOT NULL DEFAULT 0,
   FOREIGN KEY (employee_id) REFERENCES employees (id)
 );
 

@@ -5,6 +5,7 @@ body {
 
 .card {
     margin-top: 50px;
+    width:120%;
 
 }
 
@@ -220,4 +221,9 @@ button {
     text-align: center;
     color: #007bff;
     text-decoration: none;
+}
+
+/* from group add employee */
+.form-group{
+    padding-bottom: 15px;
 }

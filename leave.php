@@ -105,7 +105,7 @@ $leaves_data = getLeavesData();
             </tr>
             <?php endforeach; ?>
         </table>
-        <a href="admin_dashboard.php" class="btn btn-danger">Back</a>
+        <a href="employee_management.php" class="btn btn-danger">Back</a>
     </div>
 
     <!-- Include Bootstrap JS and jQuery -->

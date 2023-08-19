@@ -59,7 +59,8 @@ if (isset($_SESSION['success_message'])) {
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary">Submit</button>
-                                <a href="employee_dashboard.php" class="btn btn-secondary">Cancel</a>
+                                <br>
+                                <br><a href="employee_dashboard.php" class="btn btn-danger">Back</a>
                             </div>
                         </form>
                     </div>

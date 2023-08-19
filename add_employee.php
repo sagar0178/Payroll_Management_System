@@ -21,70 +21,78 @@
                         <h4 class="card-title">Add New Employee</h4>
                         <form action="process_add_employee.php" method="POST">
                             <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" required>
+                                <input type="text" class="form-control" id="name" name="name" required
+                                    placeholder="Name">
                             </div>
+
                             <div class="form-group">
-                                <label for="department">Department</label>
                                 <select class="form-control" id="department" name="department" required>
                                     <!-- PHP code to fetch department names and populate the dropdown options -->
                                     <?php
-                  require_once 'config.php';
-                  $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+                                    require_once 'config.php';
+                                    $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
-                  if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                  }
+                                    if ($conn->connect_error) {
+                                        die("Connection failed: " . $conn->connect_error);
+                                    }
 
-                  $sql = "SELECT department_name FROM departments";
-                  $result = $conn->query($sql);
+                                    $sql = "SELECT department_name FROM departments";
+                                    $result = $conn->query($sql);
 
-                  if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                      echo '<option value="' . $row['department_name'] . '">' . $row['department_name'] . '</option>';
-                    }
-                  }
+                                    if ($result->num_rows > 0) {
+                                        while ($row = $result->fetch_assoc()) {
+                                            echo '<option value="' . $row['department_name'] . '">' . $row['department_name'] . '</option>';
+                                        }
+                                    }
 
-                  $conn->close();
-                  ?>
+                                    $conn->close();
+                                    ?>
                                 </select>
                             </div>
+
                             <div class="form-group">
-                                <label for="employee_type">Employee Type</label>
-                                <input type="text" class="form-control" id="employee_type" name="employee_type"
-                                    required>
+                                <input type="text" class="form-control" id="employee_type" name="employee_type" required
+                                    placeholder="Employee Type">
                             </div>
+
                             <div class="form-group">
-                                <label for="basic_pay">Basic Pay</label>
-                                <input type="text" class="form-control" id="basic_pay" name="basic_pay" required>
+                                <input type="text" class="form-control" id="basic_pay" name="basic_pay" required
+                                    placeholder="Basic Pay">
                             </div>
+
                             <div class="form-group">
-                                <label for="contact">Contact</label>
-                                <input type="text" class="form-control" id="contact" name="contact" required>
+                                <input type="text" class="form-control" id="contact" name="contact" required
+                                    placeholder="Contact">
                             </div>
+
                             <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
+                                <input type="email" class="form-control" id="email" name="email" required
+                                    placeholder="Email">
                             </div>
+
                             <div class="form-group">
-                                <label for="home_address">Home Address</label>
-                                <input type="text" class="form-control" id="home_address" name="home_address" required>
+                                <input type="text" class="form-control" id="home_address" name="home_address" required
+                                    placeholder="Home Address">
                             </div>
+
                             <div class="form-group">
-                                <label for="city">City</label>
-                                <input type="text" class="form-control" id="city" name="city" required>
+                                <input type="text" class="form-control" id="city" name="city" required
+                                    placeholder="City">
                             </div>
+
                             <div class="form-group">
-                                <label for="zip">ZIP</label>
-                                <input type="text" class="form-control" id="zip" name="zip" required>
+                                <input type="text" class="form-control" id="zip" name="zip" required placeholder="ZIP">
                             </div>
+
                             <div class="form-group">
-                                <label for="marital_status">Marital Status</label>
                                 <select class="form-control" id="marital_status" name="marital_status" required>
                                     <option value="Married">Married</option>
                                     <option value="Unmarried">Unmarried</option>
                                 </select>
                             </div>
+
+
+
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary">Add Employee</button>
                                 <button type="button" class="btn btn-danger" onclick="goBack()">Back</button>

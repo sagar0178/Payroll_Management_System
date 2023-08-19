@@ -12,4 +12,9 @@ function goBack() {
     window.location.href = 'admin_dashboard.php';
 }
 
+function go_Back() {
+    // Redirect the user to dashboard.php
+    window.location.href = 'employee_management.php';
+}
+
 
